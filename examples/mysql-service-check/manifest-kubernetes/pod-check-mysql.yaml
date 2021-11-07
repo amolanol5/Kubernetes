@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-checkmysql
+  labels:
+    app: checkmysql
+spec:
+  containers:
+    - name: container-checkmysql
+      image: amolanol5/mysql-service-check:1.2
+      env:
+        - name: HOSTCONECTION
+          value: service-mysql

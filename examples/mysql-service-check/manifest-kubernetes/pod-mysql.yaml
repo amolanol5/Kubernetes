@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-kmysql
+  labels:
+    app: mysql
+spec:
+  containers:
+    - name: container-mysql
+      image: mysql:5.7.36
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "pass1234"
